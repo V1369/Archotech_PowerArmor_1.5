@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Helmet Base -->
+	<ThingDef Name="APA_HelmetBase" ParentName="ArmorHelmetMakeableBase" Abstract="True">
+		<techLevel>Archotech</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>33500</WorkToMake>
+			<MaxHitPoints>600</MaxHitPoints>
+			<Mass>3</Mass>
+			<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.40</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.5</ArmorRating_Heat>
+			<Flammability>0</Flammability>
+			<Insulation_Cold>999</Insulation_Cold>
+			<Insulation_Heat>999</Insulation_Heat>
+			<EquipDelay>4</EquipDelay>
+		</statBases>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.20</MentalBreakThreshold>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<PsychicSensitivity MayRequire="Ludeon.RimWorld.Royalty">+1.00</PsychicSensitivity>
+			<PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.1</PsychicEntropyRecoveryRate>
+			<MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.15</MeditationFocusGain>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
+		</equippedStatOffsets>
+		<costList>
+			<Plasteel>400</Plasteel>
+			<ComponentSpacer>10</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+		<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+		<researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+		<skillRequirements>
+			<Crafting>18</Crafting>
+		</skillRequirements>
+		<recipeUsers Inherit="False">
+			<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<tags>
+				<li>PrestigeCombatGear</li>
+				<li>Archotech</li>
+				<li>EVA</li>
+				<li>Royal</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<thingCategories Inherit="False">
+			<li>Headgear</li>
+		</thingCategories>
+	</ThingDef>
+
+	<!-- Helmet v1 -->
+	<ThingDef ParentName="APA_HelmetBase">
+		<defName>Archotech_Helmet_One</defName>
+		<label>Archotech Helmet v1</label>
+		<description>Made from Archotech into wearable armor for humans, the exact synthesis process isn't entirely understood; through either a complex process of electrophysics with an enormous amount of plasteel, or the introduction of programmed computer chips and circuit boards to existing archotech material, the result is an ultimately comfortable and invincible piece of equipment. The helmet is completely encased in archotech material yet the wearer maintains a perfect, even enhanced, line of sight</description>
+		<graphicData>
+			<texPath>Things/archotechPowerArmor/Archotech_Helmet_One_UI</texPath>
+			<drawSize>1.3</drawSize>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Things/archotechPowerArmor/Archotech_Helmet_One</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+
+	<!-- Helmet v2 -->
+	<ThingDef ParentName="APA_HelmetBase">
+		<defName>Archotech_Helmet_Two</defName>
+		<label>Archotech Helmet v2</label>
+		<description>Made from Archotech into wearable armor for humans, the exact synthesis process isn't entirely understood; through either a complex process of electrophysics with an enormous amount of plasteel, or the introduction of programmed computer chips and circuit boards to existing archotech material, the result is an ultimately comfortable and invincible piece of equipment. The helmet comes with a tinted visor that includes sensitive displays and system functions, yet the material is just as durable as the rest of the "metal" plate</description>
+		<graphicData>
+			<texPath>Things/archotechPowerArmor/Archotech_Helmet_Two_UI</texPath>
+			<drawSize>1.3</drawSize>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Things/archotechPowerArmor/Archotech_Helmet_Two</wornGraphicPath>
+		</apparel>
+	</ThingDef>
+
+		<!-- Armor Base -->
+	<ThingDef Name="APA_ArmorBase" ParentName="ApparelMakeableBase" Abstract="True">
+		<techLevel>Spacer</techLevel>
+		<tradeability>Sellable</tradeability>
+		<generateCommonality>0</generateCommonality>
+		<generateAllowChance>0</generateAllowChance>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>65000</WorkToMake>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Mass>15</Mass>
+			<ArmorRating_Sharp>1.85</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.40</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.20</ArmorRating_Heat>
+			<Flammability>0.0</Flammability>
+			<Insulation_Cold>999</Insulation_Cold>
+			<Insulation_Heat>999</Insulation_Heat>
+			<EquipDelay>15</EquipDelay>
+			<EnergyShieldRechargeRate MayRequire="Ludeon.RimWorld.Royalty">0.15</EnergyShieldRechargeRate>
+			<EnergyShieldEnergyMax MayRequire="Ludeon.RimWorld.Royalty">200</EnergyShieldEnergyMax>
+			<JumpRange MayRequire="Ludeon.RimWorld.Royalty">30</JumpRange>
+		</statBases>
+		<equippedStatOffsets>
+			<PainShockThreshold>0.20</PainShockThreshold>
+			<ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+			<HemogenGainFactor MayRequire="Ludeon.RimWorld.Biotech">0.5</HemogenGainFactor>
+			<PsychicSensitivity MayRequire="Ludeon.RimWorld.Royalty">1.00</PsychicSensitivity>
+			<PsychicEntropyRecoveryRate MayRequire="Ludeon.RimWorld.Royalty">0.04</PsychicEntropyRecoveryRate>
+			<MeditationFocusGain MayRequire="Ludeon.RimWorld.Royalty">0.025</MeditationFocusGain>
+			<HypoxiaResistance MayRequire="kentington.saveourship2">1</HypoxiaResistance>
+			<DecompressionResistance MayRequire="kentington.saveourship2">0.75</DecompressionResistance>
+			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">6</VacuumSpeedMultiplier>
+		</equippedStatOffsets>
+		<costList>
+			<Plasteel>800</Plasteel>
+			<ComponentSpacer>20</ComponentSpacer>
+		</costList>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+			<researchPrerequisite>AdvancedFabrication</researchPrerequisite>
+			<skillRequirements>
+			<Crafting>18</Crafting>
+		</skillRequirements>
+		<recipeUsers Inherit="False">
+			<li>FabricationBench</li>
+		</recipeUsers>
+		</recipeMaker>
+		<apparel>
+			<bodyPartGroups>
+				<li>Neck</li>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Waist</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<tags>
+				<li>PrestigeCombatGear</li>
+				<li>Archotech</li>
+				<li>EVA</li>
+				<li>RoyalTier2</li>
+				<li>RoyalTier5</li>
+				<li>RoyalTier7</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<useDeflectMetalEffect>true</useDeflectMetalEffect>
+		</apparel>
+		<comps>
+			<li Class="CompProperties_ApparelReloadable" MayRequire="Ludeon.RimWorld.Royalty">
+				<maxCharges>5</maxCharges>
+				<ammoDef>Gold</ammoDef>
+				<ammoCountPerCharge>5</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<chargeNoun>jump</chargeNoun>
+				<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+			</li>
+			<!--li Class="CompProperties_ApparelReloadable" MayRequire="oskarpotocki.vfe.pirates">
+				<maxCharges>4</maxCharges>
+				<ammoDef>ComponentSpacer</ammoDef>
+				<ammoCountPerCharge>5</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<chargeNoun>charge</chargeNoun>
+				<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+			</li-->
+			<li Class="CompProperties_Shield" MayRequire="Ludeon.RimWorld.Royalty">
+				<blocksRangedWeapons>false</blocksRangedWeapons>
+			</li>
+			<li Class="CompProperties_TargetEffect_BrainDamageChance">
+				<brainDamageChance>0.3</brainDamageChance>
+			</li>
+			<li Class="CompProperties_TargetEffect_GoodwillImpact">
+				<goodwillImpact>-200</goodwillImpact>
+			</li>
+			<li Class="CompProperties_TargetEffect_FleckOnTarget">
+				<fleckDef>PsycastPsychicEffect</fleckDef>
+			</li>
+			<li Class="CompProperties_TargetEffect_FleckConnecting">
+				<fleckDef>PsycastPsychicLine</fleckDef>
+			</li>
+			<li Class="CompProperties_ApparelReloadable">
+				<maxCharges>5</maxCharges>
+				<ammoDef>Weapon_GrenadeFrag</ammoDef>
+				<ammoCountPerCharge>1</ammoCountPerCharge>
+				<baseReloadTicks>60</baseReloadTicks>
+				<soundReload>Standard_Reload</soundReload>
+				<chargeNoun>grenade</chargeNoun>
+				<displayGizmoWhileDrafted>true</displayGizmoWhileDrafted>
+			</li>
+			<li MayRequire="kentington.saveourship2">
+				<compClass>SaveOurShip2.CompEVA</compClass>
+			</li>
+		</comps>
+		<verbs>
+			<li MayRequire="Ludeon.RimWorld.Royalty">
+				<verbClass>Verb_Jump</verbClass>
+				<label>jump</label>
+				<commandIcon>UI/Icons/Genes/Gene_LongJumpLegs</commandIcon>
+				<violent>false</violent>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+				<warmupTime>0.5</warmupTime>
+				<warmupEffecter>JumpWarmupEffect</warmupEffecter>
+				<requireLineOfSight>true</requireLineOfSight>
+				<flightEffecterDef>JumpFlightEffect</flightEffecterDef>
+				<soundLanding>JumpPackLand</soundLanding>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+					<canTargetPawns>false</canTargetPawns>
+					<canTargetBuildings>false</canTargetBuildings>
+				</targetParams>
+			</li>
+			<!--li Class="VFEPirates.VerbProps_MultipleProjectiles" MayRequire="oskarpotocki.vfe.pirates">
+				<label>grenade barrage</label>
+				<verbClass>VFEPirates.Verb_LaunchProjectileStaticMultiple</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>12.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<projectileCount>4</projectileCount>
+				<commandIcon>UI/Abilities/GrenadeBarrage</commandIcon>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>VFEP_Proj_GrenadierGrenade</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li-->
+			<li>
+				<label>launch frag grenade</label>
+				<verbClass>Verb_LaunchProjectileStatic</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<onlyManualCast>True</onlyManualCast>
+				<range>12.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>1.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>Shot_IncendiaryLauncher</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>Proj_GrenadierGrenade</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<thingCategories Inherit="False">
+			<li>ApparelArmor</li>
+		</thingCategories>
+	</ThingDef>
+
+	<!-- Armor v1 -->
+	<ThingDef ParentName="APA_ArmorBase">
+		<defName>Archotech_PowerArmor_One</defName>
+		<label>Archotech PowerArmor v1</label>
+		<description>Made from Archotech into wearable armor for humans, the exact synthesis process isn't entirely understood; through either a complex process of electrophysics with an enormous amount of plasteel, or the introduction of programmed computer chips and circuit boards to existing archotech material, the result is an ultimately comfortable and invincible piece of equipment. The armor is compact in design, with an efficient spread of multiple archotech sections over vital areas, and each wearer feels as if it's been fitted to their exact morphology</description>
+		<graphicData>
+			<texPath>Things/archotechPowerArmor/Archotech_PowerArmor_One_UI</texPath>
+			<drawSize>1.3</drawSize>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Things/archotechPowerArmor/Archotech_PowerArmor_One</wornGraphicPath>
+		</apparel>
+		<comps>
+			<li>
+				<compClass>CompTargetEffect_PsychicShock</compClass>
+				<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>Verb_CastTargetEffectLances</verbClass>
+				<label>psychic shock lance</label>
+				<commandIcon>Things/Item/Artifact/PsychicShockLance/PsychicShockLance</commandIcon>
+				<hasStandardCommand>true</hasStandardCommand>
+				<targetable>true</targetable>
+				<onlyManualCast>True</onlyManualCast>
+				<range>41.9</range>
+				<warmupTime>2.2</warmupTime>
+				<invalidTargetPawn>psychic shock immune</invalidTargetPawn>
+				<targetParams>
+					<canTargetBuildings>false</canTargetBuildings>
+					<onlyTargetPsychicSensitive>true</onlyTargetPsychicSensitive>
+					<neverTargetIncapacitated>true</neverTargetIncapacitated>
+				</targetParams>
+				<soundCast>PsychicShockLanceCast</soundCast>
+				<soundAiming>PsychicArtifactWarmupSustained</soundAiming>
+			</li>
+		</verbs>
+	</ThingDef>
+
+	<!-- Armor v2 -->
+	<ThingDef ParentName="APA_ArmorBase">
+		<defName>Archotech_PowerArmor_Two</defName>
+		<label>Archotech PowerArmor v2</label>
+		<description>Made from Archotech into wearable armor for humans, the exact synthesis process isn't entirely understood; through either a complex process of electrophysics with an enormous amount of plasteel, or the introduction of programmed computer chips and circuit boards to existing archotech material, the result is an ultimately comfortable and invincible piece of equipment. The armor is intimidating, with large dense panels of archotech material shaped into a powerful and robust stance, yet the suit feels weightless and easily maneuverable</description>
+		<graphicData>
+			<texPath>Things/archotechPowerArmor/Archotech_PowerArmor_Two_UI</texPath>
+			<drawSize>1.3</drawSize>
+		</graphicData>
+		<apparel>
+			<wornGraphicPath>Things/archotechPowerArmor/Archotech_PowerArmor_Two</wornGraphicPath>
+		</apparel>
+		<comps>
+			<li>
+				<compClass>CompTargetEffect_Berserk</compClass>
+			</li>
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>Verb_CastTargetEffectLances</verbClass>
+				<label>psychic insanity lance</label>
+				<commandIcon>Things/Item/Artifact/PsychicInsanityLance/PsychicInsanityLance</commandIcon>
+				<hasStandardCommand>true</hasStandardCommand>
+				<targetable>true</targetable>
+				<onlyManualCast>True</onlyManualCast>
+				<range>41.9</range>
+				<warmupTime>2.2</warmupTime>
+				<invalidTargetPawn>psychic shock immune</invalidTargetPawn>
+				<targetParams>
+					<canTargetBuildings>false</canTargetBuildings>
+					<onlyTargetPsychicSensitive>true</onlyTargetPsychicSensitive>
+					<neverTargetIncapacitated>true</neverTargetIncapacitated>
+				</targetParams>
+				<soundCast>PsychicInsanityLanceCast</soundCast>
+				<soundAiming>PsychicArtifactWarmupSustained</soundAiming>
+			</li>
+		</verbs>
+	</ThingDef>
+</Defs>
