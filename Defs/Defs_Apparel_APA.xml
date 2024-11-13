@@ -303,7 +303,7 @@
 			<wornGraphicPath>Things/archotechPowerArmor/Archotech_PowerArmor_One</wornGraphicPath>
 		</apparel>
 		<comps>
-			<li>
+			<li Class="CompProperties_ApparelReloadable">
 				<compClass>CompTargetEffect_PsychicShock</compClass>
 				<displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
 			</li>
@@ -343,7 +343,7 @@
 			<wornGraphicPath>Things/archotechPowerArmor/Archotech_PowerArmor_Two</wornGraphicPath>
 		</apparel>
 		<comps>
-			<li>
+			<li Class="CompProperties_ApparelReloadable">
 				<compClass>CompTargetEffect_Berserk</compClass>
 			</li>
 		</comps>
