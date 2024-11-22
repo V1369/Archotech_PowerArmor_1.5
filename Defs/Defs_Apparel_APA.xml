@@ -32,9 +32,6 @@
 			<DecompressionResistance MayRequire="kentington.saveourship2">0.25</DecompressionResistance>
 		</equippedStatOffsets>
 		<costList>
-			<Attomachinery>1</Attomachinery>
-            <Picomachinery>5</Picomachinery>
-            <Nanomachinery>10</Nanomachinery>
 			<Plasteel>400</Plasteel>
 			<ComponentSpacer>10</ComponentSpacer>
 		</costList>
@@ -141,9 +138,6 @@
 			<VacuumSpeedMultiplier MayRequire="kentington.saveourship2">6</VacuumSpeedMultiplier>
 		</equippedStatOffsets>
 		<costList>
-			<Attomachinery>3</Attomachinery>
-            <Picomachinery>8</Picomachinery>
-            <Nanomachinery>15</Nanomachinery>
 			<Plasteel>800</Plasteel>
 			<ComponentSpacer>20</ComponentSpacer>
 		</costList>
@@ -215,15 +209,15 @@
 				<displayGizmoWhileDrafted>true</displayGizmoWhileDrafted>
 			</li>
 			<li Class="CompProperties_ApparelReloadable">
-		        <maxCharges>1</maxCharges>
-		        <ammoDef>Chemfuel</ammoDef>
-		        <ammoCountPerCharge>40</ammoCountPerCharge>
-		        <baseReloadTicks>60</baseReloadTicks>
-		        <soundReload>Standard_Reload</soundReload>
-		        <hotKey>Misc4</hotKey>
-		        <chargeNoun>incendiary</chargeNoun>
-		        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
-		    </li>
+		        	<maxCharges>1</maxCharges>
+			        <ammoDef>Chemfuel</ammoDef>
+			        <ammoCountPerCharge>40</ammoCountPerCharge>
+			        <baseReloadTicks>60</baseReloadTicks>
+			        <soundReload>Standard_Reload</soundReload>
+			        <hotKey>Misc4</hotKey>
+			        <chargeNoun>incendiary</chargeNoun>
+			        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		    	</li>
 			<li Class="CompProperties_Shield" MayRequire="Ludeon.RimWorld.Royalty">
 				<blocksRangedWeapons>false</blocksRangedWeapons>
 			</li>
@@ -306,24 +300,24 @@
 				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
 			</li>
 			<li>
-		        <label>launch incendiary</label>
-		        <verbClass>Verb_LaunchProjectileStatic</verbClass>
-		        <hasStandardCommand>true</hasStandardCommand>
-		        <onlyManualCast>True</onlyManualCast>
-		        <range>14.9</range>
-		        <forcedMissRadius>1.9</forcedMissRadius>
-		        <warmupTime>1.5</warmupTime>
-		        <noiseRadius>4</noiseRadius>
-		        <soundCast>Shot_IncendiaryLauncher</soundCast>
-		        <soundCastTail>GunTail_Medium</soundCastTail>
-		        <muzzleFlashScale>14</muzzleFlashScale>
-		        <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
-		        <targetParams>
-		          <canTargetLocations>true</canTargetLocations>
-		        </targetParams>
-		        <defaultProjectile>Proj_GrenadePhoenixFire</defaultProjectile>
-		        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
-		    </li>
+			        <label>launch incendiary</label>
+			        <verbClass>Verb_LaunchProjectileStatic</verbClass>
+			        <hasStandardCommand>true</hasStandardCommand>
+			        <onlyManualCast>True</onlyManualCast>
+			        <range>14.9</range>
+			        <forcedMissRadius>1.9</forcedMissRadius>
+			        <warmupTime>1.5</warmupTime>
+			        <noiseRadius>4</noiseRadius>
+			        <soundCast>Shot_IncendiaryLauncher</soundCast>
+			        <soundCastTail>GunTail_Medium</soundCastTail>
+			        <muzzleFlashScale>14</muzzleFlashScale>
+			        <drawHighlightWithLineOfSight>true</drawHighlightWithLineOfSight>
+			        <targetParams>
+			          <canTargetLocations>true</canTargetLocations>
+			        </targetParams>
+			        <defaultProjectile>Proj_GrenadePhoenixFire</defaultProjectile>
+			        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
 		</verbs>
 		<thingCategories Inherit="False">
 			<li>ApparelArmor</li>
